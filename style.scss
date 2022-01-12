@@ -1,0 +1,150 @@
+$color1: black;
+
+$font1: 'Comforter';
+$font2: 'Gwendolyn';
+$font3: 'Smooch';
+$font4: cursive;
+
+$letranormal: 20px;
+$letramediana: 25px;
+
+*{
+	margin: 0;
+	padding: 0;
+}
+
+html {
+    box-sizing: border-box;
+  
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+	overflow-x: hidden;
+}
+
+h1 {
+    margin: 0;
+    text-align: center;
+    color: $color1;
+}
+
+a {
+    text-decoration: none;
+    font-size: $letranormal;
+}
+header {
+    background-color: yellow;
+    width: 100%;  
+    height: auto;  
+}
+
+.contenedor {
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 15px;
+}
+
+.navegacion {
+    display: block;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+    .barra {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav {
+        display: flex;
+        gap: 40px;
+    }
+
+    header {
+        height: 80px;
+    }
+}
+
+/* contenido principal */
+h2 {
+    text-align: center;
+}
+
+.tabla__1 {
+    font-family: $font1, $font4;
+}
+
+.tabla__2 {
+    font-family: $font2, $font4;
+}
+
+.tabla__3 {
+    font-family: $font3, $font4;
+}
+
+section {
+    padding: 20px 0;
+}
+.div {
+    padding-top: 15px;
+}
+@media (min-width: 768px) {
+    .contenido {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+    
+}
+img {
+    width: 60%;
+    display: block;
+    margin: auto;
+    border-style: solid;
+    border-color: red;
+    background-size: cover;
+    margin-top: 40px;
+}
+
+main {
+    text-align: center;
+    padding-bottom: 20px;
+
+}
+
+h3 {
+    font-size: $letramediana;
+}
+
+/* @media (min-width: 320px) {
+    iframe {
+        width: 300px;
+    }
+} */
+
+
+@media (min-width: 768px) {
+    iframe {
+        width: 500px;
+        height: 350px;
+    }
+    footer {
+        background-color: black;
+        color: white;
+        font-size: $letranormal;
+        height: 30px;
+    }
+    
+}
+
+footer {
+    background-color: black;
+    color: white;
+    font-size: $letranormal;
+    height: auto;
+}
