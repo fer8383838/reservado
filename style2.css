@@ -1,0 +1,52 @@
+body{
+    background-color: black;
+}
+p {
+    color: white;
+    font-family: "Courier";
+    font-size: 50px;
+    margin: 10px 0 0 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 36em;
+    -webkit-animation: type 13s steps(47);
+            animation: type 13s steps(47);
+  }
+  
+  p:nth-child(2) {
+    -webkit-animation: type2 18s steps(32, end);
+            animation: type2 18s steps(32, end);
+  }
+  
+  p a{
+    color: lime;
+    text-decoration: none;
+  }
+  span {
+    -webkit-animation: blink 1s infinite;
+            animation: blink 1s infinite;
+  }
+  
+  @-webkit-keyframes type {
+    from {
+      width: 0;
+    }
+  }
+  
+  @-webkit-keyframes type2 {
+    0% {
+      width: 0;
+    }
+    50% {
+      width: 0;
+    }
+    100% {
+      width: 100;
+    }
+  }
+  
+  @-webkit-keyframes blink {
+    to {
+      opacity: 0;
+    }
+  }

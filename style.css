@@ -26,16 +26,53 @@ a {
   font-size: 20px;
 }
 
-header {
-  background-color: yellow;
-  width: 100%;
-  height: auto;
+.contenedor-blog {
+  margin: auto;
+  display: table;
+  background-color: tomato;
 }
 
+h1 {
+  position: relative;
+  float: left;
+  background: white;
+  color: black;
+  font-size: 2.5em;
+  font-family: monospace;
+}
+
+h1 span {
+  position: absolute;
+  right: 0;
+  width: 0;
+  background: white;
+  border-left: 2px solid #000;
+  -webkit-animation: escribir 10s steps(35);
+          animation: escribir 10s steps(35);
+}
+
+@-webkit-keyframes escribir {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
+
+@keyframes escribir {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}
 .contenedor {
   width: 90%;
   margin: 0 auto;
   padding-top: 15px;
+  height: auto;
 }
 
 .navegacion {
@@ -121,26 +158,17 @@ section {
     gap: 20px;
   }
 }
-img {
-  width: 60%;
-  display: block;
-  margin: auto;
-  border-style: solid;
-  border-color: red;
-  background-size: cover;
-  margin-top: 40px;
-}
-
 .img {
-  height: 200px;
-  border-style: solid;
-  border-color: red;
-  background-size: cover;
+  padding-top: 10px;
+  overflow: hidden;
 }
 
 main {
   text-align: center;
   padding-bottom: 20px;
+  width: 90%;
+  margin: 0 auto;
+  text-align: justify;
 }
 
 h3 {
@@ -225,13 +253,10 @@ footer {
 
 .input-text {
   width: 100%;
+  height: 100%;
   border: none;
   padding: 1.5rem;
   border-radius: 0.5rem;
-}
-
-.w-sm-100 {
-  width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -245,4 +270,108 @@ footer {
 
 .alinear-derecha {
   justify-content: flex-end;
-}/*# sourceMappingURL=style.css.map */
+}
+
+.img:hover {
+  transform: scale(2);
+}
+
+.fotos {
+  height: auto;
+  width: 100%;
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+  display: grid;
+}
+
+.img1 {
+  background-image: url(img/blogdecafe.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.img2 {
+  background-image: url(img/blogdecafe2.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.img3 {
+  background-image: url(img/blogdecafe3.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.img4 {
+  background-size: cover;
+  background-image: url(img/blogcafe4.jpg);
+  background-position: center;
+}
+
+.img5 {
+  background-image: url(img/blogcafe5.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.img6 {
+  background-image: url(img/blogcafe6.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.img7 {
+  background-image: url(img/blogcafe7.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+@media only screen and (min-width: 767px) {
+  .img1 {
+    grid-column: 1/2;
+    grid-row: 1/3;
+    background-color: chocolate;
+    height: 600px;
+  }
+
+  .img2 {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    background-color: cornflowerblue;
+  }
+
+  .img3 {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    background-color: darkred;
+  }
+
+  .img4 {
+    grid-column: 1/2;
+    grid-row: 3/4;
+    background-color: crimson;
+  }
+
+  .img5 {
+    grid-column: 1/2;
+    grid-row: 4/5;
+    background-color: deeppink;
+  }
+
+  .img6 {
+    grid-column: 2/3;
+    grid-row: 3/5;
+    background-color: darkblue;
+    height: 600px;
+  }
+
+  .img7 {
+    grid-column: 1/3;
+    grid-row: 5/7;
+    background-color: darkgoldenrod;
+    height: 600px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
